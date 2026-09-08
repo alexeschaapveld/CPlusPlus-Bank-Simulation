@@ -32,7 +32,7 @@ void Account::withdraw(double amount) {
 double Account::getBalance() { return balance; }
 int Account::getAccountNumber() { return accountNumber; }
 
-void Account::displayBalance() { std::cout << "Current Balance: " << balance << std::endl; }
+void Account::displayBalance() { std::cout << "Current Balance: $" << balance << std::endl; }
 void Account::displayAccountNumber() { std::cout << "Account Number: " << accountNumber << std::endl; }
  
 std::string Account::getUsername() const { return username; }

@@ -62,10 +62,13 @@ int main() {
             std::cin >> password;
 
             // Verification logic handled safely via internal bank verification mapping
-            if (centralBank.login(username, password)) {
-                // Future feature extension: Nested loop to interact with individual account
-                // (e.g., withdraw, deposit, check balance commands)
+            if(centralBank.login(username, password)) {
+                std::cout << "\nLogin successful! Welcome, " << username << "!" << std::endl;
+                centralBank.accountMenu(username); // Navigate to account-specific menu
+            } else {
+                std::cout << "\nLogin failed! Please check your credentials and try again." << std::endl;
             }
+
             
         // OPTION 3: TERMINATE APP
         } else {

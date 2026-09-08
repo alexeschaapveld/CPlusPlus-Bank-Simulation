@@ -12,7 +12,8 @@ class Bank {
     public:
         Bank();
         bool createAccount(std::string username, std::string password, double initialDeposit);
-        bool login(std::string username, std::string password);      
+        bool login(std::string username, std::string password);
+        void accountMenu(std::string username);
 };
 
 #endif
